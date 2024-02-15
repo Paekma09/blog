@@ -6,7 +6,7 @@ import Router from 'koa-router';
 import bodyParser from 'koa-bodyparser';
 import mongoose from 'mongoose';
 import api from './api/index.js';
-import createFakeData from './createFakeData.js';
+// import createFakeData from './createFakeData.js';
 import jwtMiddleware from './lib/jwtMiddleware.js';
 
 //비구조화 할당을 통해 process.env 내부 값에 대한 레퍼런스 만들기
@@ -19,7 +19,7 @@ mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
-    createFakeData();
+    // createFakeData();
   })
   .catch(e => {
     console.error(e);
