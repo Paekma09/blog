@@ -6,6 +6,8 @@ import PostList from '../../components/posts/PostList';
 
 const PostListContainer = () => {
   const { username } = useParams();
+  // const params = useParams();
+  // const username = params.username.split('@')[1];
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const { posts, error, loading, user } = useSelector(

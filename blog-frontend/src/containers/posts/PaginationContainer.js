@@ -5,8 +5,9 @@ import Pagination from '../../components/posts/Pagination';
 
 const PaginationContainer = () => {
   const [searchParam] = useSearchParams();
-
   const { username } = useParams();
+  // const params = useParams();
+  // const username = params.username.split('@')[1];
   const tag = searchParam.get('tag');
   //page 가 없으면 1을 기본값으로 사용
   const page = parseInt(searchParam.get('page'), 10) || 1;
